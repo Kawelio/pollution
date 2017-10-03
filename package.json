@@ -1,0 +1,51 @@
+{
+  "name": "GADAFIE-API",
+  "version": "0.0.0",
+  "description": "GADAFIE API",
+  "main": "dist",
+  "scripts": {
+    "dev": "nodemon -w src --exec \"babel-node src/server.js --presets es2015,stage-0\"",
+    "docker": "babel-node src/server.js --presets es2015,stage-0",
+    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "start": "babel-node src/index.js",
+    "dist": "node dist",
+    "prestart": "npm run -s build",
+    "test": "eslint src"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "colors": "^1.1.2",
+    "compression": "^1.7.0",
+    "connect-mongo": "^1.3.2",
+    "cors": "^2.8.4",
+    "csurf": "^1.9.0",
+    "dotenv": "^4.0.0",
+    "errorhandler": "^1.5.0",
+    "express": "^4.13.3",
+    "express-session": "^1.15.5",
+    "express-validator": "^3.2.1",
+    "helmet": "^3.8.1",
+    "knex": "^0.13.0",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.5",
+    "morgan": "^1.8.0",
+    "multer": "^1.3.0",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "resource-router-middleware": "^0.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.0.3",
+    "eslint": "^4.3.0",
+    "nodemon": "^1.11.0"
+  }
+}
